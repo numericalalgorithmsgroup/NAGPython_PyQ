@@ -162,7 +162,7 @@ q) epsabs:0.0f
 q) epsrel:0.0001f 
 ```
 
-Next, we exit the q environment and define an integrable Python function.
+Next, we exit the q environment and define an integrable Python function.  To satisfy this parameter we may use either a Python function or a lambda expression.
 
 ```
 q) \
