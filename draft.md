@@ -28,6 +28,7 @@ Both the NAG Library for Python and kdb+ are commercial software packages that r
 
 ## 3 Examples
 
+The following three examples demonstrate how to call NAG Library for Python routines using kdb+ and PyQ.  These examples were carefully selected, as they will mirror the majority of usage cases a customer will encounter across all 1,700+ routines within the library.  If your usage case falls outside of these three examples, please contact NAG support for assistance.
 
 ### 3.1 Example 1: BLAS Routine DAXPY
 
