@@ -48,6 +48,33 @@ Below is the NAG Library for Python signature for this routine.
    Returns:    y: float, ndarray, shape(n)
 ```
 
+Within our terminal, we begin by starting a PyQ interaction session.
+
+   $ pyq
+
+Next, we import PyQ and the NAG Library for Python
+
+```
+>>> from pyq import q
+>>> from naginterfaces.library import blas
+```
+
+We then enter a q environment and define our parameers as q objects.
+
+```
+>>> q()
+q) alpha:0.5f
+q) x:(2.0, 2.0, 2.0, 2.0f)
+q) y:(4.0, 4.0, 4.0, 4.0f)
+```
+
+Finally, we exit the q environment and invoke the NAG routine.
+
+```
+q) \
+>>> z = blas.daxpy(float(q.alpha), q.x, q.y)
+>>> z  # display solution: array([4., 4., 4., 4.])
+```
 
 ### 3.2 Example Two: Nearest Correlation Matrix
 
