@@ -14,6 +14,17 @@ This paper provides detailed instructions on how to use the NAG Library for Pyth
 
 ## 2 Setting Up the Workspace
 
+Installation for both the NAG Library for Python and the PyQ extension to kdb+ may be performed using pip.<br>
+
+To install the NAG Library for Python:
+
+    $ python -m pip install --extra-index-url https:nag/com/downloads/py/naginterfaces_nag naginterfaces
+
+To install PyQ from Kx:
+
+    $ python -m pip install pyq
+
+Both the NAG Library for Python and kdb+ are commercial software packages that require active licenses for their respective usage.  To obtain a temporary license for the NAG Library for Python, please contact NAG support at support@nag.com.
 
 ## 3 Examples
 
