@@ -166,9 +166,14 @@ Next, we exit the q environment and define an integrable Python function.
 
 ```
 q) \
->>> f = lambda x: x*x
+>>> f(x):
+...  return x*x
+...
+```
+
 With our problem now fully defined, we invoke the NAG Library routine to compute our solution.
 
+```
 >>> result, error = quad.dim1_fin_smooth(f,float(q.a),float(q.b), 
                       float(q.epsabs),float(q.epsrel))
 >>> result  # 2.6666666666666667
