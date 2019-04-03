@@ -1,16 +1,18 @@
 # Using the NAG Library for Python witk Kdb+ and PyQ
 
 <p align="center">
-  Christopher Brandt<br>
-  Numerical Algorithms Group (NAG) Inc.<br>
-  Lisle, IL, USA<br>
-  christopher.brandt@nag.com<br>
+  Christopher Brandt <br>
+  Numerical Algorithms Group (NAG) Inc. <br>
+  Lisle, IL, USA <br>
+  christopher.brandt@nag.com <br>
   April 3, 2019
 </p>
 
 ## 1 Background
 
 This paper provides detailed instructions on how to use the NAG Library for Python with kdb+ and PyQ.  The NAG Library contains more than 1,700 mathematical and statistical routines,  and is accessible by numerous programming languages (including Python, C++, Java, Fortran, etc.).  PyQ is an extension to kdb+ featuring zero-copy sharing of data between Python and the q programming language.  The enclosed examples will illustrate how to access routines within the NAG Library for Python using data stored in kdb+.
+
+NAG recently published the technical report ‘Using the NAG Library with Kdb+ in a Pure Q Environment’ ([link](https://www.nag.com/doc/techrep/pdf/tr1_18.pdf)) discussing how to call the NAG Library using the new Foreign Function Interface (FFI) from Kx.  Prior to that, the NAG Blog titled ‘Calling the NAG C Library from Kdb+’ ([link](http://blog.nag.com/2013/05/calling-nag-c-library-from-kdb.html)) details how to incorporate the NAG Library with kdb+ within a C++ program.  We speculate that among our shared clients, a mixture of these methods will be employed.
 
 ## 2 Setting Up the Workspace
 
@@ -182,20 +184,20 @@ With our problem now fully defined, we invoke the NAG Library routine to compute
 
 ## 4 Links
 
-Using Python with kdb+ (PyQ)<br>
+Using Python with kdb+ (PyQ) <br>
 https://code.kx.com/q/interfaces/pyq/
 
-Kdb+ and Python: embedPy and PyQ<br>
+Kdb+ and Python: embedPy and PyQ <br>
 https://kx.com/blog/kdb-python-embedpy-pyq/
 
-Using the NAG Library with Kdb+ in a Pure Q Environment<br>
+Using the NAG Library with Kdb+ in a Pure Q Environment <br>
 https://www.nag.com/doc/techrep/pdf/tr1_18.pdf
 
-Calling the NAG C Library from Kdb+<br>
+Calling the NAG C Library from Kdb+ <br>
 http://blog.nag.com/2013/05/calling-nag-c-library-from-kdb.html
 
-NAG Library for Python Manual<br>
+NAG Library for Python Manual <br>
 https://www.nag.com/numeric/py/nagdoc_latest/index.html
 
-NAG GitHub webpage<br>
+NAG GitHub webpage <br>
 https://github.com/numericalalgorithmsgroup/
