@@ -105,6 +105,28 @@ Returns:    x: float, ndarray, shape(n,n)
             nrmgrd: float
 ```
 
+Within our interactive PyQ session, we again begin by entering a q environment and defining our parameters as q objects.
+
+```
+>>> q()
+q) alpha:0.5f
+q) x:(2.0, 2.0, 2.0, 2.0f)
+q) g:(2.0, -1.0, 0.0,  0.0f; -1.0, 2.0, -1.0, 0.0f;
+      0.0, -1.0, 2.0, -1.0f;  0.0, 0.0, -1.0, 2.0f)
+q) opt:”B” 
+q) alpha = 0.02f
+q) w:(100.0, 20.0, 20.0, 20.0f)
+```
+
+We then exit the q environment and invoke the NAG routine.
+
+```
+q) \
+>>> x = correg.corrmat_nearest_bounded(q.g, str(q.opt),
+          float(q.alpha), q.w)
+>>> x  # display solution
+```
+
 ### 3.3 Example Three: Numerical Integration
 
 With our final example, we demonstrate how to incorporate a user-defined callback function with a NAG Library for Python routine.  This example approximates the definite integal<br>
@@ -128,6 +150,29 @@ Parameters: f: callable, result = f(x,data=None)
 
 Returns:    result: float
             abserr: float
+```
+
+We start by entering a q environment and defining our parameters as q objects.
+
+```
+>>> q()
+q) a:0.0f
+q) b:2.0f
+q) epsabs:0.0f
+q) epsrel:0.0001f 
+```
+
+Next, we exit the q environment and define an integrable Python function.
+
+```
+q) \
+>>> f = lambda x: x*x
+With our problem now fully defined, we invoke the NAG Library routine to compute our solution.
+
+>>> result, error = quad.dim1_fin_smooth(f,float(q.a),float(q.b), 
+                      float(q.epsabs),float(q.epsrel))
+>>> result  # 2.6666666666666667
+>>> error   # 1.4802973661668755e-14
 ```
 
 ## 4 Links
