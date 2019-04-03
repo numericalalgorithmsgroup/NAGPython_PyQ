@@ -177,4 +177,20 @@ With our problem now fully defined, we invoke the NAG Library routine to compute
 
 ## 4 Links
 
+Using Python with kdb+ (PyQ)<br>
+https://code.kx.com/q/interfaces/pyq/
 
+Kdb+ and Python: embedPy and PyQ<br>
+https://kx.com/blog/kdb-python-embedpy-pyq/
+
+Using the NAG Library with Kdb+ in a Pure Q Environment<br>
+https://www.nag.com/doc/techrep/pdf/tr1_18.pdf
+
+Calling the NAG C Library from Kdb+<br>
+http://blog.nag.com/2013/05/calling-nag-c-library-from-kdb.html
+
+NAG Library for Python Manual<br>
+https://www.nag.com/numeric/py/nagdoc_latest/index.html
+
+NAG GitHub webpage<br>
+https://github.com/numericalalgorithmsgroup/
