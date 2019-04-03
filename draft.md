@@ -50,7 +50,9 @@ Below is the NAG Library for Python signature for this routine.
 
 Within our terminal, we begin by starting a PyQ interaction session.
 
-   $ pyq
+```
+$ pyq
+```
 
 Next, we import PyQ and the NAG Library for Python
 
