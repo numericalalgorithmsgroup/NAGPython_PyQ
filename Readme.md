@@ -32,7 +32,7 @@ The following three examples demonstrate how to call the NAG Library for *Python
 
 Our first example demonstrates how to perform the linear algebra operation
 
-$$ y \coloneqq \alpha x + b. $$
+$$ y \coloneqq \alpha x + b $$
 
 Below is the NAG Library for *Python* signature for this routine.
 
