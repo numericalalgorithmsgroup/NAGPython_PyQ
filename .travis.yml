@@ -1,5 +1,7 @@
 install:
-        - sudo apt-get install -y pandoc
+        # The version of pandoc that ships with Ubuntu at the time of writing doesn't have the --metadata-file switch
+        - wget https://github.com/jgm/pandoc/releases/download/2.7.1/pandoc-2.7.1-1-amd64.deb
+        - sudo dpkg -i pandoc-2.7.1-1-amd64.deb
         - sudo apt-get install -y texlive-latex-base
         - sudo apt-get install -y texlive-latex-recommended
         - sudo apt-get install -y texlive-fonts-recommended
