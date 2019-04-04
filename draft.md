@@ -1,7 +1,7 @@
 # Using the NAG Library for Python witk Kdb+ and PyQ
 
 Christopher Brandt <br>
-Numerical Algorithms Group (NAG) Inc. <br>
+Numerical Algorithms Group (NAG), Inc. <br>
 Lisle, IL, USA <br>
 April 3, 2019
 
@@ -25,7 +25,7 @@ Both the NAG Library for Python and kdb+ are commercial software packages that r
 
 ## 3 Examples
 
-The following three examples demonstrate how to call NAG Library for Python routines using kdb+ and PyQ.  These examples were carefully selected, as they will mirror the majority of usage cases a customer will encounter across all 1,700+ routines within the library.  If your usage case falls outside of these three examples, please contact NAG support for assistance.
+The following three examples demonstrate how to call the NAG Library for Python routines using kdb+ and PyQ.  These examples were carefully selected, as they will mirror the majority of usage cases a customer will encounter across all 1,700+ routines within the library.  If your usage case falls outside of these three examples, please contact NAG support for assistance.
 
 ### 3.1 Example One: BLAS Routine DAXPY
 
@@ -51,7 +51,7 @@ Within our terminal, we begin by starting a PyQ interaction session.
 $ pyq
 ```
 
-Next, we import PyQ and the NAG Library for Python
+Next, we import PyQ and the NAG Library for Python.
 
 ```
 >>> from pyq import q
