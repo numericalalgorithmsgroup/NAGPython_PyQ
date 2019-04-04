@@ -1,7 +1,8 @@
 install:
-        sudo apt-get install -y pandoc
-        sudo apt-get install -y texlive-latex-base
-        sudo apt-get install -y texlive-latex-recommended
+        - sudo apt-get install -y pandoc
+        - sudo apt-get install -y texlive-latex-base
+        - sudo apt-get install -y texlive-latex-recommended
+        - sudo apt-get install -y texlive-fonts-recommended
 
 script:
         "pandoc --metadata-file=./pandoc_latex.yml  Readme.md  -o Readme.pdf"
