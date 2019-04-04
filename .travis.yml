@@ -4,4 +4,4 @@ install:
         sudo apt-get install -y texlive-latex-recommended
 
 script:
-        "pandoc Readme.md -o Readme.pdf"
+        "pandoc --metadata-file=./pandoc_latex.yml  Readme.md  -o Readme.pdf"
