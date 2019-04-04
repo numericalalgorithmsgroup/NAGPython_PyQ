@@ -7,25 +7,26 @@ April 3, 2019
 
 ## 1 Background
 
-This paper provides detailed instructions on how to use the NAG Library for Python with kdb+ and PyQ.  The NAG Library contains more than 1,700 mathematical and statistical routines,  and is accessible by numerous programming languages (including Python, C++, Java, Fortran, etc.).  PyQ is an extension to kdb+ featuring zero-copy sharing of data between Python and the q programming language.  The enclosed examples will illustrate how to access routines within the NAG Library for Python using data stored in kdb+.
+This paper provides detailed instructions on how to use the [NAG Library for *Python*](https://www.nag.co.uk/numeric/py/nagdoc_latest/index.html) with [kdb+](https://kx.com/) and [PyQ](https://code.kx.com/q/interfaces/pyq/).  The NAG Library contains more than 1,700 mathematical and statistical routines,  and is accessible by numerous programming languages (including Python, C++, Java, Fortran, etc.).  PyQ is an extension to kdb+ featuring zero-copy sharing of data between Python and the q programming language.  The enclosed examples will illustrate how to access routines within the NAG Library for *Python* using data stored in kdb+.
 
 ## 2 Setting Up the Workspace
 
-Installation for both the NAG Library for Python and the PyQ extension to kdb+ may be performed using pip.
+Installation for both the NAG Library for *Python* and the PyQ extension to kdb+ may be performed using pip.
 
-To install the NAG Library for Python:
+To install the NAG Library for *Python*:
 
-    $ python -m pip install --extra-index-url https:nag/com/downloads/py/naginterfaces_nag naginterfaces
-
+```
+$ python -m pip install --extra-index-url https:nag/com/downloads/py/naginterfaces_nag naginterfaces
+```
 To install PyQ from Kx:
-
-    $ python -m pip install pyq
-
-Both the NAG Library for Python and kdb+ are commercial software packages that require active licenses for their respective usage.  To obtain a temporary license for the NAG Library for Python, please contact NAG support at support@nag.com.
+```
+$ python -m pip install pyq
+```
+Both the NAG Library for *Python* and kdb+ are commercial software packages that require active licenses for their respective usage.  To obtain a temporary license for the NAG Library for Python, please contact NAG support at [support@nag.com](mailto:support@nag.com).
 
 ## 3 Examples
 
-The following three examples demonstrate how to call the NAG Library for Python routines using kdb+ and PyQ.  These examples were carefully selected, as they will mirror the majority of usage cases a customer will encounter across all 1,700+ routines within the library.  If your usage case falls outside of these three examples, please contact NAG support for assistance.
+The following three examples demonstrate how to call the NAG Library for *Python* routines using kdb+ and PyQ.  These examples were carefully selected, as they cover techniques found in the majority of usage cases a customer will encounter across all 1,700+ routines within the library.  If your usage case falls outside of these three examples, please contact [NAG support](mailto:support@nag.com) for assistance.
 
 ### 3.1 Example One: BLAS Routine DAXPY
 
@@ -33,7 +34,7 @@ Our first example demonstrates how to perform the linear algebra operation
 
 $$ y \coloneqq \alpha x + b. $$
 
-Below is the NAG Library for Python signature for this routine.
+Below is the NAG Library for *Python* signature for this routine.
 
 ```
    naginterfaces.library.blas.daxpy(alpha,x,y)
@@ -51,7 +52,7 @@ Within our terminal, we begin by starting a PyQ interaction session.
 $ pyq
 ```
 
-Next, we import PyQ and the NAG Library for Python.
+Next, we import PyQ and the NAG Library for *Python*.
 
 ```
 >>> from pyq import q
@@ -83,7 +84,7 @@ $$ \Big\lVert W^{1/2}(G - X)W^{1/2} \Big\rVert_{F}^{2} $$
 
 where $W$ is a diagonal matrix of weights.
 
-The NAG Library for Python signature for this routine is below.
+The NAG Library for *Python* signature for this routine is below.
 
 ```
 naginterfaces.library.correg.bounded(g,opt,alpha=None,w=None,errtol=0.0,maxits=0,maxit=200)
@@ -126,11 +127,11 @@ q) \
 
 ### 3.3 Example Three: Numerical Integration
 
-With our final example, we demonstrate how to incorporate a user-defined callback function with a NAG Library for Python routine.  This example approximates the definite integal
+With our final example, we demonstrate how to incorporate a user-defined callback function with a NAG Library for *Python* routine.  This example approximates the definite integal
 
 $$ \int_{a}^{b} f(x) dx. $$
 
-The NAG Library for Python signature for this routine is below.
+The NAG Library for *Python* signature for this routine is below.
 
 ```
 naginterfaces.library.quad.dim1_fin_smooth(f,a,b,epsabs,epsrel,data=None)
@@ -179,26 +180,17 @@ With our problem now fully defined, we invoke the NAG Library routine to compute
 
 ## 4 Additional Usage Cases
 
-NAG recently published the technical report ‘Using the NAG Library with Kdb+ in a Pure Q Environment’ ([link](https://www.nag.com/doc/techrep/pdf/tr1_18.pdf)) discussing how to call the NAG Library using the new Foreign Function Interface (FFI) from Kx.  Additionally, the NAG Blog titled ‘Calling the NAG C Library from Kdb+’ ([link](http://blog.nag.com/2013/05/calling-nag-c-library-from-kdb.html)) details how to incorporate the NAG Library with kdb+ within a C++ program.  We speculate that among our shared clients, a mixture of these methods will be employed.
+NAG recently published the technical report [Using the NAG Library with Kdb+ in a Pure Q Environment](https://www.nag.com/doc/techrep/pdf/tr1_18.pdf) discussing how to call the NAG Library using the new Foreign Function Interface (FFI) from Kx.  
+
+Additionally, the NAG Blog titled [Calling the NAG C Library from Kdb+](http://blog.nag.com/2013/05/calling-nag-c-library-from-kdb.html) details how to incorporate the NAG Library with kdb+ within a C++ program.  We speculate that among our shared clients, a mixture of these methods will be employed.
 
 If your desired usage case happens to fall outside of those described within our current publications, please contact NAG support at support@nag.com for asisstance with your application.
 
 ## 5 Links
 
-Using Python with kdb+ (PyQ) <br>
-https://code.kx.com/q/interfaces/pyq/
-
-Kdb+ and Python: embedPy and PyQ <br>
-https://kx.com/blog/kdb-python-embedpy-pyq/
-
-Using the NAG Library with Kdb+ in a Pure Q Environment <br>
-https://www.nag.com/doc/techrep/pdf/tr1_18.pdf
-
-Calling the NAG C Library from Kdb+ <br>
-http://blog.nag.com/2013/05/calling-nag-c-library-from-kdb.html
-
-NAG Library for Python Manual <br>
-https://www.nag.com/numeric/py/nagdoc_latest/index.html
-
-NAG GitHub webpage <br>
-https://github.com/numericalalgorithmsgroup/
+* Using Python with kdb+ (PyQ) [https://code.kx.com/q/interfaces/pyq/](https://code.kx.com/q/interfaces/pyq/)
+* Kdb+ and Python: embedPy and PyQ [https://kx.com/blog/kdb-python-embedpy-pyq/]([https://kx.com/blog/kdb-python-embedpy-pyq/)
+* Using the NAG Library with Kdb+ in a Pure Q Environment [https://www.nag.com/doc/techrep/pdf/tr1_18.pdf](https://www.nag.com/doc/techrep/pdf/tr1_18.pdf)
+* Calling the NAG C Library from Kdb+ [http://blog.nag.com/2013/05/calling-nag-c-library-from-kdb.html](http://blog.nag.com/2013/05/calling-nag-c-library-from-kdb.html)
+* NAG Library for Python Manual [https://www.nag.com/numeric/py/nagdoc_latest/index.html](https://www.nag.com/numeric/py/nagdoc_latest/index.html)
+* NAG GitHub Organisation [https://github.com/numericalalgorithmsgroup/](https://github.com/numericalalgorithmsgroup/)
