@@ -184,7 +184,7 @@ If your desired usage case happens to fall outside of those described within our
 ## 5 Links
 
 * NAG Library for Python Manual [https://www.nag.com/numeric/py/nagdoc_latest/index.html](https://www.nag.com/numeric/py/nagdoc_latest/index.html)
-* Kx Kdb+ q Documentation [https://code.kx.com/v2/](https://code.kx.com/v2/)
+* Get Going with Kdb+ [https://code.kx.com/v2/](https://code.kx.com/v2/)
 * Using Python with kdb+ (PyQ) [https://code.kx.com/q/interfaces/pyq/](https://code.kx.com/q/interfaces/pyq/)
 * Kdb+ and Python: embedPy and PyQ [https://kx.com/blog/kdb-python-embedpy-pyq/](https://kx.com/blog/kdb-python-embedpy-pyq/)
 * Using the NAG Library with Kdb+ in a Pure Q Environment [https://www.nag.com/doc/techrep/pdf/tr1_18.pdf](https://www.nag.com/doc/techrep/pdf/tr1_18.pdf)
