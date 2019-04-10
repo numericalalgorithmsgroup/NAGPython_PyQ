@@ -32,7 +32,7 @@ The following three examples demonstrate how to call the NAG Library for *Python
 
 Our first example demonstrates how to perform the linear algebra operation
 
-$$ y \coloneqq \alpha x + b $$
+$$ y \coloneqq \alpha x + b. $$
 
 Below is the NAG Library for *Python* signature for this routine.
 
@@ -90,7 +90,7 @@ The NAG Library for *Python* signature for this routine is below.
 naginterfaces.library.correg.bounded(g,opt,alpha=None,w=None,errtol=0.0,maxits=0,maxit=200)
 
 Parameters: g: float, array-like, shape(n,n)
-            opt:str, length 1
+            opt: str, length 1
             alpha: None or float, optional
             w: None or float, array-like, shape(n), optional
             errtol: float, optional
@@ -127,7 +127,7 @@ q) \
 
 ### 3.3 Example Three: Numerical Integration
 
-With our final example, we demonstrate how to incorporate a user-defined callback function with a NAG Library for *Python* routine.  This example approximates the definite integal
+With our final example, we demonstrate how to incorporate a user-defined callback function with a NAG Library for *Python* routine.  This example approximates the definite integral
 
 $$ \int_{a}^{b} f(x) dx. $$
 
@@ -184,7 +184,7 @@ NAG recently published the technical report [Using the NAG Library with Kdb+ in 
 
 Additionally, the NAG Blog titled [Calling the NAG C Library from Kdb+](http://blog.nag.com/2013/05/calling-nag-c-library-from-kdb.html) details how to incorporate the NAG Library with kdb+ within a C++ program.  We speculate that among our shared clients, a mixture of these methods will be employed.
 
-If your desired usage case happens to fall outside of those described within our current publications, please contact NAG support at support@nag.com for asisstance with your application.
+If your desired usage case happens to fall outside of those described within our current publications, please contact NAG support at support@nag.com for assistance with your application.
 
 ## 5 Links
 
