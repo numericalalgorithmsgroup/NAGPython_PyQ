@@ -1,4 +1,4 @@
-# Using the NAG Library for Python witk Kdb+ and PyQ
+# Using the NAG Library for Python with Kdb+ and PyQ
 
 Christopher Brandt <br>
 Numerical Algorithms Group (NAG), Inc. <br>
@@ -22,7 +22,7 @@ To install PyQ from Kx:
 ```
 $ python -m pip install pyq
 ```
-Both the NAG Library for *Python* and kdb+ are commercial software packages that require active licenses for their respective usage.  To obtain a temporary license for the NAG Library for Python, please contact NAG support at [support@nag.com](mailto:support@nag.com).
+Both the NAG Library for *Python* and kdb+ are commercial software packages that require active licenses for their respective usage.  To obtain a temporary license for the NAG Library for *Python*, please contact NAG support at [support@nag.com](mailto:support@nag.com).
 
 ## 3 Examples
 
@@ -46,7 +46,7 @@ Below is the NAG Library for *Python* signature for this routine.
    Returns:    y: float, ndarray, shape(n)
 ```
 
-Within our terminal, we begin by starting a PyQ interaction session.
+Within our terminal, we begin by initiating a PyQ interaction session.
 
 ```
 $ pyq
@@ -59,7 +59,7 @@ Next, we import PyQ and the NAG Library for *Python*.
 >>> from naginterfaces.library import blas
 ```
 
-We then enter a q environment and define our parameers as q objects.
+We then enter a q environment and define our parameters as q objects.
 
 ```
 >>> q()
@@ -87,7 +87,7 @@ where $W$ is a diagonal matrix of weights.
 The NAG Library for *Python* signature for this routine is below.
 
 ```
-naginterfaces.library.correg.bounded(g,opt,alpha=None,w=None,errtol=0.0,maxits=0,maxit=200)
+naginterfaces.library.correg.corrmat_nearest_bounded(g,opt,alpha=None,w=None,errtol=0.0,maxits=0,maxit=200)
 
 Parameters: g: float, array-like, shape(n,n)
             opt: str, length 1
@@ -109,10 +109,9 @@ Within our interactive PyQ session, we again begin by entering a q environment a
 >>> q()
 q) alpha:0.5f
 q) x:(2.0, 2.0, 2.0, 2.0f)
-q) g:(2.0, -1.0, 0.0,  0.0f; -1.0, 2.0, -1.0, 0.0f;
-      0.0, -1.0, 2.0, -1.0f;  0.0, 0.0, -1.0, 2.0f)
+q) g:(2.0, -1.0, 0.0, 0.0f; -1.0, 2.0, -1.0, 0.0f; 0.0, -1.0, 2.0, -1.0f; 0.0, 0.0, -1.0, 2.0f)
 q) opt:”B” 
-q) alpha = 0.02f
+q) alpha:0.02f
 q) w:(100.0, 20.0, 20.0, 20.0f)
 ```
 
@@ -120,8 +119,7 @@ We then exit the q environment and invoke the NAG routine.
 
 ```
 q) \
->>> x = correg.corrmat_nearest_bounded(q.g, str(q.opt),
-          float(q.alpha), q.w)
+>>> x = correg.corrmat_nearest_bounded(q.g, str(q.opt), float(q.alpha), q.w)
 >>> x  # display solution
 ```
 
@@ -169,20 +167,17 @@ q) \
 ...
 ```
 
-With our problem now fully defined, we invoke the NAG Library routine to compute our solution.
+With our problem now fully defined, we invoke the NAG routine to compute our solution.
 
 ```
->>> result, error = quad.dim1_fin_smooth(f,float(q.a),float(q.b), 
-                      float(q.epsabs),float(q.epsrel))
+>>> result, error = quad.dim1_fin_smooth(f, float(q.a), float(q.b), float(q.epsabs), float(q.epsrel))
 >>> result  # 2.6666666666666667
 >>> error   # 1.4802973661668755e-14
 ```
 
 ## 4 Additional Usage Cases
 
-NAG recently published the technical report [Using the NAG Library with Kdb+ in a Pure Q Environment](https://www.nag.com/doc/techrep/pdf/tr1_18.pdf) discussing how to call the NAG Library using the new Foreign Function Interface (FFI) from Kx.  
-
-Additionally, the NAG Blog titled [Calling the NAG C Library from Kdb+](http://blog.nag.com/2013/05/calling-nag-c-library-from-kdb.html) details how to incorporate the NAG Library with kdb+ within a C++ program.  We speculate that among our shared clients, a mixture of these methods will be employed.
+NAG recently published the technical report [Using the NAG Library with Kdb+ in a Pure Q Environment](https://www.nag.com/doc/techrep/pdf/tr1_18.pdf) discussing how to call the NAG Library using the new [Foreign Function Interface (FFI)](https://code.kx.com/q/interfaces/ffi/) from Kx.  Additionally, the NAG Blog titled [Calling the NAG C Library from Kdb+](http://blog.nag.com/2013/05/calling-nag-c-library-from-kdb.html) details how to incorporate the NAG Library with kdb+ within a C++ program.  We speculate that among our shared clients, a mixture of these methods will be employed.
 
 If your desired usage case happens to fall outside of those described within our current publications, please contact NAG support at support@nag.com for assistance with your application.
 
