@@ -16,7 +16,8 @@ Installation for both the NAG Library for *Python* and the PyQ extension to kdb+
 To install the NAG Library for *Python*:
 
 ```
-$ python -m pip install --extra-index-url https:nag/com/downloads/py/naginterfaces_nag naginterfaces
+$ python -m pip install --extra-index-url
+    https:nag/com/downloads/py/naginterfaces_nag naginterfaces
 ```
 To install PyQ from Kx:
 ```
@@ -87,7 +88,8 @@ where $W$ is a diagonal matrix of weights.
 The NAG Library for *Python* signature for this routine is below.
 
 ```
-naginterfaces.library.correg.corrmat_nearest_bounded(g,opt,alpha=None,w=None,errtol=0.0,maxits=0,maxit=200)
+naginterfaces.library.correg.corrmat_nearest_bounded(
+  g,opt,alpha=None,w=None,errtol=0.0,maxits=0,maxit=200)
 
 Parameters: g: float, array-like, shape(n,n)
             opt: str, length 1
@@ -109,7 +111,8 @@ Within our interactive PyQ session, we again begin by entering a q environment a
 >>> q()
 q) alpha:0.5f
 q) x:(2.0, 2.0, 2.0, 2.0f)
-q) g:(2.0, -1.0, 0.0, 0.0f; -1.0, 2.0, -1.0, 0.0f; 0.0, -1.0, 2.0, -1.0f; 0.0, 0.0, -1.0, 2.0f)
+q) g:(2.0, -1.0, 0.0,  0.0f; -1.0, 2.0, -1.0, 0.0f;
+      0.0, -1.0, 2.0, -1.0f;  0.0, 0.0, -1.0, 2.0f)
 q) opt:”B” 
 q) alpha:0.02f
 q) w:(100.0, 20.0, 20.0, 20.0f)
@@ -170,7 +173,8 @@ q) \
 With our problem now fully defined, we invoke the NAG routine to compute our solution.
 
 ```
->>> result, error = quad.dim1_fin_smooth(f, float(q.a), float(q.b), float(q.epsabs), float(q.epsrel))
+>>> result, error = quad.dim1_fin_smooth(
+      f, float(q.a), float(q.b), float(q.epsabs), float(q.epsrel))
 >>> result  # 2.6666666666666667
 >>> error   # 1.4802973661668755e-14
 ```
