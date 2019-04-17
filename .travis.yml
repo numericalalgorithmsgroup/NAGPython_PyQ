@@ -8,3 +8,11 @@ install:
 
 script:
         "pandoc --metadata-file=./pandoc_latex.yml  Readme.md  -o Readme.pdf"
+
+deploy:
+        provider: pages
+        skip-cleanup: true
+        github-token: $ghtok  # Set in the settings page of your repository, as a secure variable
+        keep-history: true
+        on:
+          branch: gh-pages
