@@ -7,7 +7,7 @@ April 3, 2019
 
 ## 1 Background
 
-This paper provides detailed instructions on how to use the [NAG Library for *Python*](https://www.nag.co.uk/numeric/py/nagdoc_latest/index.html) with [kdb+](https://kx.com/) and [PyQ](https://code.kx.com/q/interfaces/pyq/).  The NAG Library contains more than 1,700 mathematical and statistical routines,  and is accessible by numerous programming languages (including Python, C++, Java, Fortran, etc.).  PyQ is an extension to kdb+ featuring zero-copy sharing of data between Python and the q programming language.  The enclosed examples will illustrate how to access routines within the NAG Library for *Python* using data stored in kdb+.
+This paper provides detailed instructions on how to use the [NAG Library for *Python*](https://www.nag.com/numeric/py/nagdoc_latest/index.html) with [kdb+](https://code.kx.com/v2/) and [PyQ](https://code.kx.com/q/interfaces/pyq/).  The NAG Library contains more than 1,700 mathematical and statistical routines,  and is accessible by numerous programming languages (including Python, C++, Java, Fortran, etc.).  PyQ is an extension to kdb+ featuring zero-copy sharing of data between Python and the q programming language.  The enclosed examples will illustrate how to access routines within the NAG Library for *Python* using data stored in kdb+.
 
 ## 2 Setting Up the Workspace
 
