@@ -53,7 +53,7 @@ Within our terminal, we begin by initiating a PyQ interaction session.
 $ pyq
 ```
 
-Next, we import PyQ and the NAG Library for *Python*.
+Next, we import PyQ and the BLAS module of the NAG Library for *Python*.
 
 ```
 >>> from pyq import q
@@ -105,10 +105,10 @@ Returns:    x: float, ndarray, shape(n,n)
             nrmgrd: float
 ```
 
-Within our interactive PyQ session, we begin importing the correlationby entering entering a q environment.
+Within our interactive PyQ session, we begin importing the Correlation and Regression Analysis module, then entering entering a q environment.
 
 ```
->>> 
+>>> from naginterfaces.library import correg
 >>> q()
 ```
 
@@ -156,7 +156,7 @@ Returns:    result: float
             abserr: float
 ```
 
-We start by importing the quadrature module, then enter a q environment.
+We start by importing the Quadrature module, then enter a q environment.
 
 ```
 >>> from naginterfaces.library import quad
