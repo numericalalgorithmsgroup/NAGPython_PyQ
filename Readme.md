@@ -65,8 +65,8 @@ We then enter a q environment and define our parameters as q objects.
 ```
 >>> q()
 q) alpha:0.5f
-q) x:(2.0, 2.0, 2.0, 2.0f)
-q) y:(4.0, 4.0, 4.0, 4.0f)
+q) x:4#2 2 2 2f
+q) y:4#4 4 4 4f
 ```
 
 Finally, we exit the q environment and invoke the NAG routine.
@@ -105,17 +105,22 @@ Returns:    x: float, ndarray, shape(n,n)
             nrmgrd: float
 ```
 
-Within our interactive PyQ session, we again begin by entering a q environment and defining our parameters as q objects.
+Within our interactive PyQ session, we begin importing the correlationby entering entering a q environment.
 
 ```
+>>> 
 >>> q()
+```
+
+Next, we define our parameters as q objects.
+
+```
 q) alpha:0.5f
-q) x:(2.0, 2.0, 2.0, 2.0f)
-q) g:(2.0, -1.0, 0.0,  0.0f; -1.0, 2.0, -1.0, 0.0f;
-      0.0, -1.0, 2.0, -1.0f;  0.0, 0.0, -1.0, 2.0f)
+q) x:4#2 2 2 2f
+q) g:4 4#2 -1 0 0 -1 2 -1 0 0 -1 2 -1 0 0 -1 2f
 q) opt:”B” 
 q) alpha:0.02f
-q) w:(100.0, 20.0, 20.0, 20.0f)
+q) w:4#100 20 20 20f
 ```
 
 We then exit the q environment and invoke the NAG routine.
@@ -151,13 +156,19 @@ Returns:    result: float
             abserr: float
 ```
 
-We start by entering a q environment and defining our parameters as q objects.
+We start by importing the quadrature module, then enter a q environment.
 
 ```
+>>> from naginterfaces.library import quad
 >>> q()
-q) a:0.0f
-q) b:2.0f
-q) epsabs:0.0f
+```
+
+Next, we define our parameters as q objects.
+
+```
+q) a:0f
+q) b:2f
+q) epsabs:0f
 q) epsrel:0.0001f 
 ```
 
@@ -166,7 +177,7 @@ Next, we exit the q environment and define an integrable Python function.  To sa
 ```
 q) \
 >>> f(x):
-...  return x*x
+      return x*x
 ...
 ```
 
