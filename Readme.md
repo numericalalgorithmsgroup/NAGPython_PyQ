@@ -1,9 +1,6 @@
 # Using the NAG Library for Python with Kdb+ and PyQ
 
-Christopher Brandt <br>
-Numerical Algorithms Group (NAG), Inc. <br>
-Lisle, IL, USA <br>
-April 3, 2019
+Christopher Brandt, NAG Inc., 24 -April 2019
 
 ## 1 Background
 
@@ -27,7 +24,7 @@ Both the NAG Library for *Python* and kdb+ are commercial software packages that
 
 ## 3 Examples
 
-The following three examples demonstrate how to call the NAG Library for *Python* routines using kdb+ and PyQ.  These examples were carefully selected, as they cover techniques found in the majority of usage cases a customer will encounter across all 1,700+ routines within the library.  If your usage case falls outside of these three examples, please contact [NAG support](mailto:support@nag.com) for assistance.
+The following three examples demonstrate how to call NAG Library for *Python* routines using kdb+ and PyQ.  These examples were carefully selected, as they cover techniques found in the majority of usage cases a customer will encounter across all 1,700+ routines within the library.  If your usage case falls outside of these three examples, please contact [NAG support](mailto:support@nag.com) for assistance.
 
 ### 3.1 Example One: BLAS Routine DAXPY
 
@@ -47,7 +44,7 @@ Below is the NAG Library for *Python* signature for this routine.
    Returns:    y: float, ndarray, shape(n)
 ```
 
-Within our terminal, we begin by initiating a PyQ interaction session.
+Within our terminal, we begin by initiating a PyQ interactive session.
 
 ```
 $ pyq
@@ -105,16 +102,16 @@ Returns:    x: float, ndarray, shape(n,n)
             nrmgrd: float
 ```
 
-Within our interactive PyQ session, we begin importing the Correlation and Regression Analysis module, then entering entering a q environment.
+Within our interactive PyQ session, we begin by importing the Correlation and Regression Analysis module of the NAG Library for *Python*.
 
 ```
 >>> from naginterfaces.library import correg
+```
+
+Next, we enter a q environment and define our parameters as q objects.
+
+```
 >>> q()
-```
-
-Next, we define our parameters as q objects.
-
-```
 q) alpha:0.5f
 q) x:4#2 2 2 2f
 q) g:4 4#2 -1 0 0 -1 2 -1 0 0 -1 2 -1 0 0 -1 2f
@@ -127,7 +124,8 @@ We then exit the q environment and invoke the NAG routine.
 
 ```
 q) \
->>> x = correg.corrmat_nearest_bounded(q.g, str(q.opt), float(q.alpha), q.w)
+>>> x = correg.corrmat_nearest_bounded(
+          q.g, str(q.opt), float(q.alpha), q.w)
 >>> x  # display solution
 ```
 
@@ -156,16 +154,16 @@ Returns:    result: float
             abserr: float
 ```
 
-We start by importing the Quadrature module, then enter a q environment.
+We start by importing the Quadrature module of the NAG Library for *Python*.
 
 ```
 >>> from naginterfaces.library import quad
+```
+
+Next, we enter a q environment and define our parameters as q objects.
+
+```
 >>> q()
-```
-
-Next, we define our parameters as q objects.
-
-```
 q) a:0f
 q) b:2f
 q) epsabs:0f
