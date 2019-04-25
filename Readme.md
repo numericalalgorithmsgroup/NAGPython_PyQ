@@ -174,7 +174,7 @@ Next, we exit the q environment and define an integrable Python function.  To sa
 
 ```
 q) \
->>> f(x):
+>>> def f(x):
       return x*x
 ...
 ```
