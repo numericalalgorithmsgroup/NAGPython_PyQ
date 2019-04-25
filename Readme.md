@@ -124,7 +124,7 @@ We then exit the q environment and invoke the NAG routine.
 
 ```
 q) \
->>> x = correg.corrmat_nearest_bounded(
+>>> x, feval, itera, nrmgrd = correg.corrmat_nearest_bounded(
           q.g, str(q.opt), float(q.alpha), q.w)
 >>> x  # display solution
 ```
