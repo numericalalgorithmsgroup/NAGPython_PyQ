@@ -4,7 +4,7 @@ Christopher Brandt, NAG Inc., 24 April 2019
 
 ## 1 Background
 
-This paper provides detailed instructions on how to use the [NAG Library for *Python*](https://www.nag.com/numeric/py/nagdoc_latest/index.html) with [kdb+](https://code.kx.com/v2/) and [PyQ](https://code.kx.com/q/interfaces/pyq/).  The NAG Library contains more than 1,700 mathematical and statistical routines,  and is accessible by numerous programming languages (including Python, C++, Java, Fortran, etc.).  PyQ is an extension to kdb+ featuring zero-copy sharing of data between Python and the q programming language.  The enclosed examples will illustrate how to access routines within the NAG Library for *Python* using data stored in kdb+.
+This paper provides detailed instructions on how to use the [NAG Library for *Python*](https://www.nag.com/numeric/py/nagdoc_latest/index.html) with [kdb+](https://code.kx.com/v2/) and [PyQ](https://code.kx.com/q/interfaces/pyq/).  The NAG Library contains more than 1,800 mathematical and statistical routines,  and is accessible by numerous programming languages (including Python, C++, Java, Fortran, etc.).  PyQ is an extension to kdb+ featuring zero-copy sharing of data between Python and the q programming language.  The enclosed examples will illustrate how to access routines within the NAG Library for *Python* using data stored in kdb+.
 
 ## 2 Setting Up the Workspace
 
@@ -24,7 +24,7 @@ Both the NAG Library for *Python* and kdb+ are commercial software packages that
 
 ## 3 Examples
 
-The following three examples demonstrate how to call NAG Library for *Python* routines using kdb+ and PyQ.  These examples were carefully selected, as they cover techniques found in the majority of usage cases a customer will encounter across all 1,700+ routines within the library.  If your usage case falls outside of these three examples, please contact [NAG support](mailto:support@nag.com) for assistance.
+The following three examples demonstrate how to call the NAG Library for *Python* routines using kdb+ and PyQ.  These examples were carefully selected, as they cover techniques found in the majority of usage cases a customer will encounter across all 1,800+ routines within the Library.  If your usage case falls outside of these three examples, please contact [NAG support](mailto:support@nag.com) for assistance.
 
 ### 3.1 Example One: BLAS Routine DAXPY
 
@@ -196,7 +196,7 @@ If your desired usage case happens to fall outside of those described within our
 
 ## 5 Links
 
-* NAG Library for Python Manual [https://www.nag.com/numeric/py/nagdoc_latest/index.html](https://www.nag.com/numeric/py/nagdoc_latest/index.html)
+* NAG Library for *Python* Manual [https://www.nag.com/numeric/py/nagdoc_latest/index.html](https://www.nag.com/numeric/py/nagdoc_latest/index.html)
 * Get Going with Kdb+ [https://code.kx.com/v2/](https://code.kx.com/v2/)
 * Using Python with kdb+ (PyQ) [https://code.kx.com/q/interfaces/pyq/](https://code.kx.com/q/interfaces/pyq/)
 * Kdb+ and Python: embedPy and PyQ [https://kx.com/blog/kdb-python-embedpy-pyq/](https://kx.com/blog/kdb-python-embedpy-pyq/)
