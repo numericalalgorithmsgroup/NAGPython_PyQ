@@ -7,7 +7,7 @@ install:
         - sudo apt-get install -y texlive-fonts-recommended
 
 script:
-        "pandoc --metadata-file=./pandoc_latex.yml  Readme.md  -o Readme.pdf"
+        "pandoc -f markdown+fancy_lists --metadata-file=./pandoc_latex.yml  Readme.md  -o NAG_kdb.pdf"
 
 deploy:
         provider: pages
