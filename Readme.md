@@ -196,8 +196,8 @@ If your desired usage case happens to fall outside of those described within our
 
 ## 5 References / Bibliography
 
-[1.] Calling the NAG C Library from Kdb+ [http://blog.nag.com/2013/05/calling-nag-c-library-from-kdb.html](http://blog.nag.com/2013/05/calling-nag-c-library-from-kdb.html)
-[1.] Get Going with Kdb+ [https://code.kx.com/v2/](https://code.kx.com/v2/)
+1. Calling the NAG C Library from Kdb+ [http://blog.nag.com/2013/05/calling-nag-c-library-from-kdb.html](http://blog.nag.com/2013/05/calling-nag-c-library-from-kdb.html)
+1. Get Going with Kdb+ [https://code.kx.com/v2/](https://code.kx.com/v2/)
 1. Kdb+ and Python: embedPy and PyQ [https://kx.com/blog/kdb-python-embedpy-pyq/](https://kx.com/blog/kdb-python-embedpy-pyq/)
 1. NAG GitHub Organisation [https://github.com/numericalalgorithmsgroup/](https://github.com/numericalalgorithmsgroup/)
 1. NAG Library for *Python* Manual [https://www.nag.com/numeric/py/nagdoc_latest/index.html](https://www.nag.com/numeric/py/nagdoc_latest/index.html)
