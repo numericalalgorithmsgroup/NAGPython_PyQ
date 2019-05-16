@@ -16,7 +16,7 @@ To install the NAG Library for *Python*:
 $ python -m pip install --extra-index-url
     https:nag/com/downloads/py/naginterfaces_nag naginterfaces
 ```
-To install PyQ from Kx:
+The PyQ package is developed by [Kx Systems](https://kx.com/), the developers of kdb+. To install it:
 ```
 $ python -m pip install pyq
 ```
@@ -192,15 +192,16 @@ With our problem now fully defined, we invoke the NAG routine to compute our sol
 
 NAG recently published the technical report [Using the NAG Library with Kdb+ in a Pure Q Environment](https://www.nag.com/doc/techrep/pdf/tr1_18.pdf) discussing how to call the NAG Library using the new [Foreign Function Interface (FFI)](https://code.kx.com/q/interfaces/ffi/) from Kx.  Additionally, the NAG Blog titled [Calling the NAG C Library from Kdb+](http://blog.nag.com/2013/05/calling-nag-c-library-from-kdb.html) details how to incorporate the NAG Library with kdb+ within a C++ program.  We speculate that among our shared clients, a mixture of these methods will be employed.
 
-If your desired usage case happens to fall outside of those described within our current publications, please contact NAG support at support@nag.com for assistance with your application.
+If your desired usage case happens to fall outside of those described within our current publications, please contact NAG support at [support@nag.com](mailto:support@nag.com) for assistance with your application.
 
-## 5 Links
+## 5 References / Bibliography
 
-* NAG Library for *Python* Manual [https://www.nag.com/numeric/py/nagdoc_latest/index.html](https://www.nag.com/numeric/py/nagdoc_latest/index.html)
-* Get Going with Kdb+ [https://code.kx.com/v2/](https://code.kx.com/v2/)
-* Using Python with kdb+ (PyQ) [https://code.kx.com/q/interfaces/pyq/](https://code.kx.com/q/interfaces/pyq/)
-* Kdb+ and Python: embedPy and PyQ [https://kx.com/blog/kdb-python-embedpy-pyq/](https://kx.com/blog/kdb-python-embedpy-pyq/)
-* Using the NAG Library with Kdb+ in a Pure Q Environment [https://www.nag.com/doc/techrep/pdf/tr1_18.pdf](https://www.nag.com/doc/techrep/pdf/tr1_18.pdf)
-* Using Foreign Functions with Kdb+ (FFI) [https://code.kx.com/q/interfaces/ffi/](https://code.kx.com/q/interfaces/ffi/)
-* Calling the NAG C Library from Kdb+ [http://blog.nag.com/2013/05/calling-nag-c-library-from-kdb.html](http://blog.nag.com/2013/05/calling-nag-c-library-from-kdb.html)
-* NAG GitHub Organisation [https://github.com/numericalalgorithmsgroup/](https://github.com/numericalalgorithmsgroup/)
+(#) Calling the NAG C Library from Kdb+ [http://blog.nag.com/2013/05/calling-nag-c-library-from-kdb.html](http://blog.nag.com/2013/05/calling-nag-c-library-from-kdb.html)
+(#) Get Going with Kdb+ [https://code.kx.com/v2/](https://code.kx.com/v2/)
+(#) Kdb+ and Python: embedPy and PyQ [https://kx.com/blog/kdb-python-embedpy-pyq/](https://kx.com/blog/kdb-python-embedpy-pyq/)
+(#) NAG GitHub Organisation [https://github.com/numericalalgorithmsgroup/](https://github.com/numericalalgorithmsgroup/)
+(#) NAG Library for *Python* Manual [https://www.nag.com/numeric/py/nagdoc_latest/index.html](https://www.nag.com/numeric/py/nagdoc_latest/index.html)
+(#) Using Foreign Functions with Kdb+ (FFI) [https://code.kx.com/q/interfaces/ffi/](https://code.kx.com/q/interfaces/ffi/)
+(#) Using Python with kdb+ (PyQ) [https://code.kx.com/q/interfaces/pyq/](https://code.kx.com/q/interfaces/pyq/)
+(#) Using the NAG Library with Kdb+ in a Pure Q Environment [https://www.nag.com/doc/techrep/pdf/tr1_18.pdf](https://www.nag.com/doc/techrep/pdf/tr1_18.pdf)
+
