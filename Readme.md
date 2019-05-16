@@ -1,6 +1,6 @@
 # Using the NAG Library for Python with Kdb+ and PyQ
 
-Christopher Brandt, Numerical Algorithms Group Inc., 24 April 2019
+Christopher Brandt, Numerical Algorithms Group Inc.
 
 ## 1 Background
 
