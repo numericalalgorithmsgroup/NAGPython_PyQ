@@ -16,7 +16,7 @@ To install the NAG Library for *Python*:
 $ python -m pip install --extra-index-url
     https:nag/com/downloads/py/naginterfaces_nag naginterfaces
 ```
-To install PyQ from Kx:
+The PyQ package is developed by [Kx Systems](https://kx.com/), the developers of kdb+. To install it:
 ```
 $ python -m pip install pyq
 ```
